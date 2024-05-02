@@ -1,0 +1,66 @@
+@import "../../styles/_fun"
+@import "../../styles/_var"
+
+.header-global
+    @include container
+    width: 100%
+    height: 80px
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.337)
+
+    .navbar-globalNav
+        @include container
+        height: 80px
+        @include flex(center,center, row)
+        .navbar-global-gutters
+            @include flex(space-between,center, row)
+            min-width: 1024px
+            width: 1024px
+
+            //Logo component
+            .logo-wrap
+                .logo-link
+                    .logo-img
+                        width: 60px
+                        height: 60px
+
+            //globalNav__wrapper
+            .globalNav__wrapper
+                @include flex(space-between,center, row)
+                width: 100%
+
+                //NavBtms component
+                .flex-shrink-none
+                    .list
+                        list-style-type: none
+                        padding: 0
+                    .flex
+                        @include flex(center,center, row)
+                        .globalNav__desktopListItem
+                            margin-left: 10px
+                            .globalNav__desktopLink
+                                color: $text
+                                text-decoration: none
+                                font-size: $s1-5
+                                font-family: $nav-title-font
+                                &:hover
+                                    color: $gret-tx
+                //LogoBar component
+                .flex-shrink-none
+                    .nav-button
+                        @include links($text)
+                        border: 2px solid $text
+                        padding: 8px 20px
+                        border-radius: 25px
+                        font-weight: 600
+                    .nav-button--default
+                        margin-right: 10px
+                        &:hover
+                            color: $white
+                            background-color: $olive-txt
+
+                    .nav-button--positive
+                        color: $white
+                        background-color: $text
+                        &:hover
+                            color: $text
+                            background-color: $olive-txt
