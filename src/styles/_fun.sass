@@ -2,11 +2,24 @@
     max-width: 100%
     width: 100%
 
+@mixin wrap
+    max-width: 1024px
+    width: 1024px
+
 @mixin flex($j-c,$a-i, $flex-d)
     display: flex
     justify-content: $j-c
     align-items: $a-i
     flex-direction: $flex-d
+
 @mixin links($color)
     text-decoration: none
     color: $color
+
+@mixin list
+    list-style-type: none
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    padding: 0
