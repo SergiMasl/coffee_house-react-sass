@@ -1,22 +1,25 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function LogBar({ setIsLog }) {
+  const location = useLocation();
+
   return (
     <div className="flex-shrink-none">
-      <a
+      <Link
         className="nav-button nav-button--default"
-        href="#"
+        to="/accaunt/login "
         onClick={() => setIsLog(true)}
       >
         Sign in
-      </a>
-      <a
+      </Link>
+      <Link
         className="nav-button nav-button--positive"
-        href="#"
+        to="/accaunt/create"
         onClick={() => setIsLog(true)}
       >
         Join now
-      </a>
+      </Link>
     </div>
   );
 }

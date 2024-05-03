@@ -1,0 +1,95 @@
+@import "../../styles/_fun"
+@import "../../styles/_var"
+
+.log-layout
+    @include container
+    @include flex(center,center,row)
+    background-image: $gradient-blue
+    height: 100vh
+    .log-wrapper
+        @include wrap
+        border-radius: 15px
+        box-shadow: 0 0 8px 3px rgb(0 0 0 / 50%)
+        @include flex(center,center,row)
+        padding: 5rem 0
+        background-color: $log-layout
+        height: 300px
+
+        //login
+
+        .login-description
+            border-radius: 15px
+            width: 300px
+            padding: 5em 1em
+            box-shadow: 0 0 8px 14px #90bdbd
+            background-image: $gradient-blue-revers
+            left: 30px
+            position: absolute
+            left: 19%
+
+            .login-description-wrap
+
+        .login-form-wrap
+            width: 300px
+            border: 2px solid #a4dee8
+            border-radius: 15px
+            padding: 3em 2em
+            @include flex(center,center,column)
+            background-color: #cabf7d42
+            position: absolute
+            left: 48%
+
+            h3
+                color: $white
+                font-size: $s2
+            p
+                color: $white
+                font-size: $s1
+
+            input
+                width: 90%
+                padding: 5px 8px
+                border-radius: 15px
+                border: none
+                background-color: #bdd7dd
+                margin: 10px
+            .password-wrap
+                width: 94%
+                @include flex(space-between,center,row)
+                margin-bottom: 20px
+                .password-wrap-showpass
+                    @include flex(center,center,row)
+                    .checkbox-style
+                        appearance: none
+                        -webkit-appearance: none
+                        -moz-appearance: none
+
+                        border: 2px solid #ccc
+                        border-radius: 3px
+                        outline: none
+                        cursor: pointer
+                        margin: 0
+                        background-color: #a4dee8
+                        border: 1px solid $gret-tx
+                        padding: 0
+                        width: 20px
+                        height: 20px
+                        margin-right: 5px
+                    .checkbox-style:checked
+                        background-color: transparent
+
+                    .checkbox-style:checked::after
+                        content: '\2714'
+                        display: block
+                        color: #333
+                        text-align: center
+                        line-height: 18px
+
+    label
+        color: #535353
+        font-size: $s0-8
+        .forgot-pass
+            color: #535353
+            font-size: $s0-8
+
+        //singup

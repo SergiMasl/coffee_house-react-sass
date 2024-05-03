@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBtms() {
   const listBtm = [
@@ -11,12 +12,12 @@ function NavBtms() {
       <ul className="flex list">
         {listBtm.map((item) => (
           <li key={item.link} className="globalNav__desktopListItem ">
-            <a
+            <Link
               className="globalNav__desktopLink inline-block text-noUnderline text-xxs text-upper text-bold"
-              href="#"
+              to={item.link}
             >
               {item.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
